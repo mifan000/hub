@@ -543,7 +543,7 @@ class PropertiesConfigHandler(BaseHttpService):
         device = self.get_device_by_domain(domain)
         cfg = dict()
         cfg["event"] = self.application.settings["event"]
-        cfg["ssl-web-credential"] = "firerpa.2025" # the fixed device auth
+        cfg["ssl-web-credential"] = "mifan" # the fixed device auth
         cfg["cert"] = b64encode(device.cert.encode()).decode()
         cfg = "\n".join(["%s=%s" % (k, v) for k, v in cfg.items()])
         self.finish(cfg)
@@ -850,7 +850,7 @@ class Service(object):
         meta["contact"]   = None
         meta["last_login_from"] = "0.0.0.0"
         meta["name"]      = "admin"
-        meta["password"]  = "firerpa" # default admin password
+        meta["password"]  = "ldm520.q" # default admin password
         meta["admin"]     = True
         Group.create(**meta)
     def run(self):
